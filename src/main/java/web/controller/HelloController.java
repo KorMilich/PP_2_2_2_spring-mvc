@@ -14,9 +14,9 @@ public class HelloController {
 	@GetMapping(value = "/")
 	public String printWelcome(ModelMap model) {
 		List<String> messages = new ArrayList<>();
-		messages.add("Hello!");
-		messages.add("I'm Spring MVC application");
-		messages.add("5.2.0 version by sep'19 ");
+		messages.add("Привет!");
+		messages.add("Я Михаил.");
+		messages.add("У меня есть странная жена! ");
 		model.addAttribute("messages", messages);
 		return "index";
 	}

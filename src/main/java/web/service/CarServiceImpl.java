@@ -26,6 +26,7 @@ public class CarServiceImpl implements CarService {
         return car;
     }
     public List<Car> getCarsNumber(int count) {
-        return car.stream().limit(count).collect(Collectors.toList());
+        return car.stream().limit(count).toList();// Слушай, помоему через стрим лучше, тк как при вводе большего числа чем есть в списке, он вернет просто полный список.
+//        return car.subList(0,count);    а если черех subList, то потребуется доп обработка на исключение IndexOutOfBoundsException
     }
 }

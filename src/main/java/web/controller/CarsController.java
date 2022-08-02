@@ -18,7 +18,7 @@ public class CarsController {
 
     private CarServiceImpl carService;
 
-    @Autowired
+
     public CarsController(CarServiceImpl carService) {
         this.carService = carService;
     }
